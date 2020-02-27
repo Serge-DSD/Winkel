@@ -113,38 +113,6 @@ header .width .menu__item--cart {
   font-weight: 100;
 }
 
-header .width .menu__item--shop {
-  position: relative;
-}
-
-header .width .menu__item--shop .dropdown {
-  position: absolute;
-  background: white;
-  bottom: -165px;
-  left: -25px;
-  width: 145px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding-left: 25px;
-  display: none;
-}
-
-header .width .menu__item--shop .dropdown a {
-  margin: 8px 0;
-  font-size: 13px;
-}
-
-header .width .menu__item--shop:hover .dropdown {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 header .width .menu__item a {
   color: black;
 }
@@ -505,9 +473,10 @@ header .width .menu__item a {
 }
 
 .main .blog .width .container2 {
-  background: gray;
   padding: 25px;
   padding-top: 15px;
+  width: 100%;
+  max-width: 290px;
 }
 
 .main .blog .width .container2 > div {
@@ -515,7 +484,7 @@ header .width .menu__item a {
 }
 
 .main .blog .width .container2 .search {
-  margin-bottom: 60px;
+  margin-bottom: 100px;
 }
 
 .main .blog .width .container2 .search form {
@@ -568,6 +537,10 @@ header .width .menu__item a {
   color: #000000;
 }
 
+.main .blog .width .container2 .categories {
+  margin-bottom: 100px;
+}
+
 .main .blog .width .container2 .categories h2 {
   margin-bottom: 30px;
   font-size: 20px;
@@ -595,16 +568,16 @@ header .width .menu__item a {
   color: #ccc;
 }
 
+.main .blog .width .container2 .recent {
+  margin-bottom: 100px;
+}
+
 .main .blog .width .container2 .recent h2 {
   font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 30px;
   font-weight: 400;
   color: black;
-}
-
-.main .blog .width .container2 .recent ul {
-  margin-bottom: 30px;
 }
 
 .main .blog .width .container2 .recent ul li {
@@ -614,6 +587,7 @@ header .width .menu__item a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 .main .blog .width .container2 .recent ul li a {
@@ -641,6 +615,55 @@ header .width .menu__item a {
 
 .main .blog .width .container2 .recent ul li div p:last-child {
   font-size: 12px;
+}
+
+.main .blog .width .container2 .cloud {
+  margin-bottom: 100px;
+}
+
+.main .blog .width .container2 .cloud h2 {
+  margin-bottom: 30px;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.main .blog .width .container2 .cloud ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .blog .width .container2 .cloud ul li a {
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 6px 10px;
+  margin-bottom: 7px;
+  margin-right: 4px;
+  border-radius: 4px;
+  color: black;
+  border: 1px solid #cdcdcd;
+  font-size: 11px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.main .blog .width .container2 .cloud ul li a:hover {
+  border-color: black;
+}
+
+.main .blog .width .container2 .paragraph h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: black;
+  font-weight: 400;
+}
+
+.main .blog .width .container2 .paragraph p {
+  line-height: 30px;
 }
 
 .main .two .width {
@@ -1734,6 +1757,11 @@ footer .up i {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .main .blog .width .container2 {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
   .main .blog .width .container2 > div form input {
     min-width: auto;
   }
@@ -1751,6 +1779,9 @@ footer .up i {
     width: fit-content;
     margin-left: 25px;
     font-size: 18px;
+  }
+  .main .blog .width .container2 .paragraph p {
+    padding-right: 50px;
   }
   footer .width .container {
     -ms-flex-wrap: wrap;
@@ -1933,7 +1964,11 @@ footer .up i {
     max-width: inherit;
   }
   header {
-    padding: 20px 10px;
+    padding: 20px 0px;
+  }
+  header .width {
+    width: 95%;
+    margin: 0 auto;
   }
   .main .two .width .content__title {
     padding-left: 5px;
@@ -1952,6 +1987,9 @@ footer .up i {
   .main .three .width .container .product, .main .five .width .container .product {
     width: 95%;
     max-width: 570px;
+  }
+  .main .blog .width .container2 .recent ul li div {
+    width: calc(100% - 100px);
   }
 }
 /*# sourceMappingURL=style.css.map */
